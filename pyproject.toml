@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vcf-toolkit"
+version = "0.1.0"
+description = "Dependency-free VCF summary statistics (Ti/Tv, variant types, genotypes) and filtering"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+keywords = ["bioinformatics", "NGS", "VCF", "variant calling", "genomics"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+vcfkit = "vcf_toolkit.cli:main"
+
+[tool.setuptools]
+packages = ["vcf_toolkit"]
